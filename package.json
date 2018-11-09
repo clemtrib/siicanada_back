@@ -1,0 +1,26 @@
+{
+  "name": "siicanada_back",
+  "version": "1.0.0",
+  "description": "siicanada_back",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/clemtrib/siicanada_back.git"
+  },
+  "author": "clement tribouillard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clemtrib/siicanada_back/issues"
+  },
+  "homepage": "https://github.com/clemtrib/siicanada_back#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jwt-simple": "^0.5.5",
+    "mongoose": "^5.3.10",
+    "password-hash": "^1.2.2"
+  }
+}
