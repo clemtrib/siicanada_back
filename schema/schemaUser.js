@@ -1,7 +1,7 @@
-import mongoose from "mongoose"
-import passwordHash from "password-hash"
-import jwt from "jwt-simple"
-import config from "../config/config"
+const mongoose = require('mongoose')
+const passwordHash = require('password-hash')
+const jwt = require('jwt-simple')
+const config = require('../config/config')
 
 const userSchema = mongoose.Schema({
     email: {
