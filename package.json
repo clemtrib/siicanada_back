@@ -2,9 +2,9 @@
   "name": "siicanada_back",
   "version": "1.0.0",
   "description": "siicanada_back",
-  "main": "server.js",
+  "main": "start.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node start.js"
   },
   "repository": {
     "type": "git",
@@ -16,11 +16,6 @@
     "url": "https://github.com/clemtrib/siicanada_back/issues"
   },
   "homepage": "https://github.com/clemtrib/siicanada_back#readme",
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
@@ -29,7 +24,7 @@
     "password-hash": "^1.2.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
   }
 }

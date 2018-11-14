@@ -1,6 +1,6 @@
 
-const User = require('../../schema/schemaUser.js');
-const passwordHash = require("password-hash");
+import User from "../../schema/schemaUser"
+import passwordHash from "password-hash"
 
 function signup(req, res) {
     if (!req.body.email || !req.body.password) {
@@ -18,7 +18,7 @@ function signup(req, res) {
                 email: user.email
             }, function (err, result) {
                 if (err) {
-                    reject(500);
+                    reject(500)
                 } else {
                     if (result) {
                         reject(204)
@@ -30,7 +30,7 @@ function signup(req, res) {
         })
 
         findUser.then(function () {
-            var _u = new User(user);
+            var _u = new User(user)
             _u.save(function (err, user) {
                 if (err) {
                     res.status(500).json({
@@ -49,12 +49,12 @@ function signup(req, res) {
                     res.status(500).json({
                         "text": "Erreur interne"
                     })
-                    break;
+                    break
                 case 204:
                     res.status(204).json({
                         "text": "L'adresse email existe déjà"
                     })
-                    break;
+                    break
                 default:
                     res.status(500).json({
                         "text": "Erreur interne"
